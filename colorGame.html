@@ -32,6 +32,25 @@
 <br>
 <div id="info">When you guess, you've got to guess it right</div>
 <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function main()
+{
+    console.log("Leetcode Call");
+    $.ajax
+    ({
+        dataType: "html",
+		headers: { 'Access-Control-Allow-Origin': '*' },
+        url: "https://leetcode.com/api/problems/all",
+        success: function(data)
+        {
+            console.log("log response on success");
+            console.log(data);
+			$(".result").html(data);
+        }
+    });
+}
+</script> 
 <script type="text/javascript" src="colorGame.js"></script>
 </body>
 </html>

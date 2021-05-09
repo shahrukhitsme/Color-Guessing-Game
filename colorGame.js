@@ -13,7 +13,7 @@ var pickedIndex;
 var maxAttempts=3;
 
 init();
-
+main();
 function init(){
 	setupModeButtons();
 	setupSquares();
